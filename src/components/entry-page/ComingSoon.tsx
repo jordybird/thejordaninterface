@@ -7,7 +7,7 @@ const ComingSoon = () => {
 
   const handleSpotifyClick = () => {
     // Placeholder navigation - update this with actual Spotify link later
-    router.push('/spotify-placeholder');
+    router.push('https://open.spotify.com/show/4IL0J6QOf0YvoED9a3AoSX?si=bXxPFPHVQgWGXrQ9frepeg');
   };
 
   const handleAppleClick = () => {
@@ -17,17 +17,19 @@ const ComingSoon = () => {
 
   return (
     <section className="bg-[#00BFFF]">
-      <div className="max-w-7xl mx-auto pl-8 pr-4 py-16">
+      <div className="max-w-7xl mx-auto px-4 md:pl-8 md:pr-4 py-16">
         <div className="flex flex-col md:flex-row items-center gap-8">
           {/* Left side - Image */}
-          <div className="w-full md:w-1/2">
-            <Image
-              src="/podcast.jpg"
-              alt="Podcast Preview"
-              width={600}
-              height={400}
-              className="rounded-lg shadow-xl"
-            />
+          <div className="w-[95vw] md:w-1/2 -mx-4 md:mx-0">
+            <div className="rounded-lg shadow-xl">
+              <Image
+                src="/podcast.jpg"
+                alt="Podcast Preview"
+                width={600}
+                height={400}
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
           </div>
 
           {/* Right side - Content */}
@@ -37,9 +39,9 @@ const ComingSoon = () => {
             </h2>
             
             <p className="text-xl mb-6">
-              Join us for insightful conversations about technology, 
-              entrepreneurship, and the future of private aviation. 
-              Subscribe now to get notified when we launch!
+              Join me for insightful conversations about technology, 
+              entrepreneurship, and everyday life. 
+              Follow on your platform of choice!
             </p>
 
             {/* Call to Action Buttons */}
