@@ -76,6 +76,15 @@ export default function LatestEpisodes() {
           </article>
         </Link>
       </div>
+
+      {/* Discover More Episodes Button */}
+      <div className="flex justify-center">
+        <Link href="/show">
+          <button className=" slide-button bg-[#8a2be2] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-opacity-90 transition-all duration-300">
+            Discover more episodes
+          </button>
+        </Link>
+      </div>
     </section>
   );
 }

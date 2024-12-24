@@ -34,13 +34,13 @@ const AboutMe = () => {
           </div>
 
           {/* Image */}
-          <div className="w-full md:w-1/4 relative overflow-hidden h-64 md:h-96 mt-6 md:mt-0">
-            <img
-              src="/imageofme.png"
-              alt="Jordan Cox"
-              className="w-full h-full mt-md:h-[155%] object-cover md:-mt-12"
-            />
-          </div>
+          <div className="w-full md:w-1/3 relative overflow-visible h-64 md:h-96 mt-6 md:mt-0">
+  <img
+    src="/imageofme.png"
+    alt="Jordan Cox"
+    className="w-auto h-full md:h-[150%] ml-12 object-cover md:-mt-20"
+  />
+</div>
         </div>
       </div>
 

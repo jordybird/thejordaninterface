@@ -13,10 +13,10 @@ const SignUpForNewsletter = () => {
         <div className="flex flex-col md:flex-row items-center gap-8">
           {/* Text Content */}
           <div className="w-full md:w-2/3">
-            <h2 className="text-4xl md:text-5xl font-bold text-white">
-              <span className="block">Sign up for my</span>
-              <span className="block">newsletter</span>
-            </h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white">
+  <span className="block">Sign Up For My</span>
+  <span className="block">Blog</span>
+</h2>
             
             <p className="text-lg text-white/90 mt-6 max-w-xl">
               Stay updated with the latest insights on tech, 

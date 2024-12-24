@@ -3,7 +3,7 @@
 import React, { useState, useRef } from 'react';
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import SearchOverlay from './overlay/SearchOverlay';
+import SearchOverlay from '../overlay/SearchOverlay';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -72,7 +72,7 @@ const Header: React.FC = () => {
 
   return (
     <div ref={scope}>
-      <header className="fixed top-0 left-0 right-0 bg-white z-50 px-6 h-20 flex items-center">
+      <header className="fixed top-0 left-0 right-0 bg-[#f9f9f9] z-50 px-6 h-20 flex items-center">
         <div className="flex items-center justify-between w-full max-w-7xl mx-auto">
           {/* Logo */}
           <a href="/" className="flex-shrink-0">
@@ -102,7 +102,7 @@ const Header: React.FC = () => {
               onClick={handleHeaderSearchClick}
               className="flex items-center text-[#28282B] hover:text-[#00bfff] transition-colors"
             >
-              <span className="text-md font-bold mr-2">Search</span>
+              <span className="text-base font-semibold mr-2">Search</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
@@ -140,10 +140,10 @@ const Header: React.FC = () => {
                 readOnly
               />
               <button 
-                className="absolute right-6 top-1/2 transform -translate-y-1/2 hover:text-[#00bfff] transition-colors"
+                className="absolute right-6 top-1/2 transform -translate-y-1/2"
                 onClick={handleSearchInputClick}
               >
-                <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-gray-400 hover:text-[#00bfff] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </button>

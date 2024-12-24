@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -8,13 +7,11 @@ const Footer = () => {
   const footerLinks = [
     {
       links: [
-        { name: 'Content', href: '#' },
-        { name: 'Projects', href: '#' },
-        { name: 'Podcast', href: '#' },
-        { name: 'Newsletter', href: '#' },
-        { name: 'Companies', href: '#' },
-        { name: 'About', href: '#' },
-        { name: 'Library', href: '/library' },
+        { name: 'Content', href: '/content' },
+        { name: 'Projects', href: '/projects' },
+        { name: 'Podcast', href: '/show' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'About', href: '/about' },
       ]
     }
   ];
@@ -32,11 +29,9 @@ const Footer = () => {
           {/* Logo Section */}
           <div className="mb-8 md:mb-0">
             <Link href="/">
-              <Image 
-                src="/logo.png" 
-                alt="Logo" 
-                width={120} 
-                height={32} 
+              <img 
+                src="/Logo.png"
+                alt="Logo"
                 className="h-8 w-auto"
               />
             </Link>
@@ -50,7 +45,7 @@ const Footer = () => {
                   <Link 
                     key={link.name}
                     href={link.href}
-                    className="text-lg text-[#28282B] hover:text-[#28282B]/70 transition-colors"
+                    className="text-lg text-[#28282B] hover:text-[#00bfff] transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -58,34 +53,35 @@ const Footer = () => {
               </div>
             ))}
           </div>
-
-          {/* Social Links */}
-          <div className="flex items-start space-x-6">
-            {socialLinks.map((social) => (
-              <a 
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#28282B] hover:text-[#28282B]/70 transition-colors"
-                aria-label={social.label}
-              >
-                <Image 
-                  src={social.icon} 
-                  alt={social.label}
-                  width={24} 
-                  height={24}
-                />
-              </a>
-            ))}
-          </div>
         </div>
 
-        {/* Copyright */}
+        {/* Copyright and Social Links */}
         <div className="mt-12 pt-6 border-t border-gray-200">
-          <p className="text-sm text-[#28282B]/70">
-            © {currentYear} All rights reserved.
-          </p>
+          <div className="flex justify-between items-center">
+            <p className="text-sm text-[#28282B]/70">
+              © {currentYear} All rights reserved.
+            </p>
+            
+            {/* Social Links */}
+            <div className="flex items-center space-x-6">
+              {socialLinks.map((social) => (
+                <a 
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#28282B] hover:text-[#00bfff] transition-colors"
+                  aria-label={social.label}
+                >
+                  <img 
+                    src={social.icon}
+                    alt={social.label}
+                    className="w-6 h-6"
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { 
   Code, Wrench, Brain, Shield, Rocket, 
   Building, TrendingUp, Wallet, Heart, Star, 
@@ -59,23 +60,29 @@ const ContentLibrary = () => {
           <div className="flex justify-start md:justify-center gap-2 min-w-max">
             <button 
               onClick={() => setActiveCategory('all')}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-500
+                border border-[#8a2be2] text-[#28282B]
+                relative overflow-hidden group
                 ${activeCategory === 'all' 
                   ? 'bg-[#8a2be2] text-white' 
-                  : 'bg-gray-100 text-[#28282B] hover:bg-gray-200'}`}
+                  : 'hover:text-white'}`}
             >
-              All
+              <span className="relative z-10">All</span>
+              <div className="absolute inset-0 bg-[#8a2be2] transform -translate-x-full transition-transform duration-500 ease-out group-hover:translate-x-0"></div>
             </button>
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-500
+                  border border-[#8a2be2] text-[#28282B]
+                  relative overflow-hidden group
                   ${activeCategory === category.id 
                     ? 'bg-[#8a2be2] text-white' 
-                    : 'bg-gray-100 text-[#28282B] hover:bg-gray-200'}`}
+                    : 'hover:text-white'}`}
               >
-                {category.id.charAt(0).toUpperCase() + category.id.slice(1)}
+                <span className="relative z-10">{category.id.charAt(0).toUpperCase() + category.id.slice(1)}</span>
+                <div className="absolute inset-0 bg-[#8a2be2] transform -translate-x-full transition-transform duration-500 ease-out group-hover:translate-x-0"></div>
               </button>
             ))}
           </div>
@@ -87,7 +94,8 @@ const ContentLibrary = () => {
             <div 
               key={index}
               className="bg-white p-4 md:p-6 rounded-lg border border-gray-100 
-                       hover:shadow-md transition-shadow"
+                       hover:shadow-md transition-all duration-300
+                       hover:border-[#8a2be2] hover:border-2"
             >
               <div className="text-[#8a2be2] mb-3">
                 {item.icon}
@@ -100,6 +108,15 @@ const ContentLibrary = () => {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Discover More Button */}
+        <div className="flex justify-center mt-12">
+          <Link href="/content">
+            <button className="slide-button bg-[#8a2be2] text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-opacity-90 transition-all duration-300">
+              Discover more content
+            </button>
+          </Link>
         </div>
       </div>
     </section>
