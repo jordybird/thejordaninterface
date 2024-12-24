@@ -77,7 +77,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <a href="/" className="flex-shrink-0">
             <img 
-              src="/Logo.png" 
+              src="/JordanInterface.png" 
               alt="Logo" 
               className="h-10 w-auto"
             />
