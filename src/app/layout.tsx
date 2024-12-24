@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Jordan Cox",
-  description: "Explore the creative library of Jordan Cox, host of The Jordan Interface podcast. Find podcast episodes, updates on current projects, and personal insights shared through the blog."
+  description: "Explore the creative library of Jordan Cox, host of The Jordan Interface podcast. Find podcast episodes, updates on current projects, and personal insights shared through the blog.",
+  icons: ['/favicon.ico'],
 };
 
 
