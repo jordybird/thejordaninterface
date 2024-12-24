@@ -20,7 +20,7 @@ export default function LatestEpisodes() {
     description:
       'Welcome to The Jordan Interface Podcast! In this introductory episode, Jordan Interface sets the stage for what listeners can expect from future episodes, discussing the intersection of technology, entrepreneurship, and personal development.',
     publishDate: '2024-04-01',
-    thumbnail: '/thumbnail.jpg',
+    thumbnail: '/thumb.png',
     tags: ['Emotions & Relationships'],
   };
 
