@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="mb-8 md:mb-0">
             <Link href="/">
               <img 
-                src="/Logo.png"
+                src="/JordanInterface.png"
                 alt="Logo"
                 className="h-8 w-auto"
               />

@@ -15,7 +15,6 @@ const Header: React.FC = () => {
 
   useGSAP(() => {
     if (isMenuOpen && menuRef.current && menuContentRef.current) {
-      // Menu background animation
       gsap.to(menuRef.current, {
         opacity: 1,
         duration: 0.3,
@@ -23,7 +22,6 @@ const Header: React.FC = () => {
         display: "block",
       });
 
-      // Menu content animation with type assertion for HTMLElement
       const children = Array.from(menuContentRef.current.children) as HTMLElement[];
       gsap.from(children, {
         y: 40,
@@ -34,7 +32,6 @@ const Header: React.FC = () => {
         delay: 0.2
       });
     } else if (menuRef.current) {
-      // Reverse animations
       gsap.to(menuRef.current, {
         opacity: 0,
         duration: 0.3,
@@ -48,20 +45,17 @@ const Header: React.FC = () => {
     }
   }, { scope, dependencies: [isMenuOpen] });
 
-  // Handle search input click from menu
   const handleSearchInputClick = () => {
     setSearchOpenedFromMenu(true);
     setIsSearchOpen(true);
     setIsMenuOpen(false);
   };
 
-  // Handle search click from header
   const handleHeaderSearchClick = () => {
     setSearchOpenedFromMenu(false);
     setIsSearchOpen(true);
   };
 
-  // Handle search close
   const handleSearchClose = () => {
     setIsSearchOpen(false);
     if (searchOpenedFromMenu) {
@@ -72,24 +66,24 @@ const Header: React.FC = () => {
 
   return (
     <div ref={scope}>
-      <header className="fixed top-0 left-0 right-0 bg-[#f9f9f9] z-50 px-6 h-20 flex items-center">
-        <div className="flex items-center justify-between w-full max-w-7xl mx-auto">
+      <header className="fixed top-0 left-0 right-0 bg-[#0a0a0a] z-50 h-20 flex items-center">
+        <div className="flex items-center justify-between w-full max-w-[1400px] mx-auto px-4 md:px-20">
           {/* Logo */}
           <a href="/" className="flex-shrink-0">
             <img 
-              src="/JordanInterface.png" 
+              src="/bloglogo.png" 
               alt="Logo" 
-              className="h-10 w-auto"
+              className="h-8 md:h-10 w-auto"
             />
           </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden xl:flex items-center space-x-6 ml-12">
-            <a href="/projects" className="text-md font-semibold text-[#28282B] hover:text-[#00bfff] transition-colors">Projects</a>
-            <a href="/show" className="text-md font-semibold text-[#28282B] hover:text-[#00bfff] transition-colors">Podcast</a>
-            <a href="/blog" className="text-md font-semibold text-[#28282B] hover:text-[#00bfff] transition-colors">Blog</a>
-            <a href="/content" className="text-md font-semibold text-[#28282B] hover:text-[#00bfff] transition-colors">Content</a>
-            <a href="/about" className="text-md font-semibold text-[#28282B] hover:text-[#00bfff] transition-colors">About</a>
+            <a href="/projects" className="text-md font-semibold text-white hover:text-[#00bfff] transition-colors">Projects</a>
+            <a href="/show" className="text-md font-semibold text-white hover:text-[#00bfff] transition-colors">Podcast</a>
+            <a href="/blog" className="text-md font-semibold text-white hover:text-[#00bfff] transition-colors">Blog</a>
+            <a href="/content" className="text-md font-semibold text-white hover:text-[#00bfff] transition-colors">Content</a>
+            <a href="/about" className="text-md font-semibold text-white hover:text-[#00bfff] transition-colors">About</a>
           </nav>
 
           {/* Desktop CTA Buttons and Search */}
@@ -100,9 +94,9 @@ const Header: React.FC = () => {
             
             <button 
               onClick={handleHeaderSearchClick}
-              className="flex items-center text-[#28282B] hover:text-[#00bfff] transition-colors"
+              className="flex items-center text-white hover:text-[#00bfff] transition-colors"
             >
-              <span className="text-base font-semibold mr-2">Search</span>
+              <span className="text-md font-bold mr-2">Search</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
@@ -112,7 +106,7 @@ const Header: React.FC = () => {
           {/* Mobile Menu Button */}
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="xl:hidden text-[#28282B] hover:text-[#00bfff] transition-colors text-lg font-semibold focus:outline-none ml-auto"
+            className="xl:hidden text-white hover:text-[#00bfff] transition-colors text-lg font-semibold focus:outline-none ml-auto"
           >
             {isMenuOpen ? 'Close' : 'Menu'}
           </button>
@@ -127,7 +121,7 @@ const Header: React.FC = () => {
       >
         <div 
           ref={menuContentRef}
-          className="max-w-4xl mx-auto px-6 pt-32"
+          className="max-w-[1400px] mx-auto px-4 md:px-16 pt-32"
         >
           {/* Search Bar */}
           <div className="mb-12">
@@ -140,10 +134,10 @@ const Header: React.FC = () => {
                 readOnly
               />
               <button 
-                className="absolute right-6 top-1/2 transform -translate-y-1/2"
+                className="absolute right-6 top-1/2 transform -translate-y-1/2 hover:text-[#00bfff] transition-colors"
                 onClick={handleSearchInputClick}
               >
-                <svg className="w-6 h-6 text-gray-400 hover:text-[#00bfff] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </button>

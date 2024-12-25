@@ -78,7 +78,7 @@ const SearchOverlay: React.FC<SearchOverlayProps> = ({ isOpen, onClose }) => {
           {/* Header with Logo and Close Button */}
           <div className="flex justify-between items-center mb-8">
             <img 
-              src="/logo.png" 
+              src="/JordanInterface.png" 
               alt="Jordan Interface Logo" 
               className="h-10 w-auto"
             />
