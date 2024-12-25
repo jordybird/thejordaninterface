@@ -230,23 +230,23 @@ export default function IntroductionEpisodePage() {
     categories: ['Technology', 'Entrepreneurship'],
     articles: [
       {
-        title: 'Understanding the Tech Landscape in 2024',
-        journal: 'Tech Today',
-        url: 'https://techtoday.com/articles/understanding-tech-2024',
+        title: 'Eye on the Horizon: 5 Tech Trends Reshaping the Business Landscape',
+        journal: 'Kearney',
+        url: 'https://www.kearney.com/service/digital-analytics/article/eye-on-the-horizon-5-tech-trends-reshaping-the-business-landscape',
       },
     ],
     books: [
       {
-        title: 'The Lean Startup',
-        author: 'Eric Ries',
-        url: 'https://example.com/the-lean-startup',
+        title: 'Life 3.0: Being Human in the Age of Artificial Intelligence',
+        author: 'Max Tegmark',
+        url: 'https://www.amazon.com/Life-3-0-Being-Artificial-Intelligence/dp/1101946598',
       },
     ],
     otherResources: [
       {
-        title: 'Entrepreneurship 101',
-        source: 'Startup Hub',
-        url: 'https://startuphub.com/entrepreneurship-101',
+        title: 'AI And The Future Of Work',
+        source: 'Sarah Choudhary',
+        url: 'https://www.forbes.com/councils/forbestechcouncil/2024/07/12/ai-and-the-future-of-work/#:~:text=AI%20automates%20repetitive%20tasks%2C%20but,new%20jobs%20will%20be%20created.',
       },
     ],
     hubermanLabEpisodes: [
