@@ -19,7 +19,7 @@ const LatestEpisodes = dynamic(() => import('@/components/entry-page/LatestEpiso
   ),
 });
 
-const ContentLibrary = dynamic(() => import('@/components/entry-page/ContentLibrary'), {
+const ContentLibrary = dynamic(() => import('@/components/show/explore-topics'), {
   ssr: false,
   loading: () => (
     <div className="py-16 text-center text-xl">Loading content library...</div>
